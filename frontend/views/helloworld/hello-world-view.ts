@@ -1,7 +1,8 @@
 import { showNotification } from '@vaadin/flow-frontend/a-notification';
 import '@vaadin/vaadin-button';
 import '@vaadin/vaadin-text-field';
-import { css, customElement, html, LitElement } from 'lit-element';
+import { css, html, LitElement } from 'lit';
+import {customElement} from "lit-element";
 
 @customElement('hello-world-view')
 export class HelloWorldView extends LitElement {

@@ -7,17 +7,18 @@
     <packaging>jar</packaging>
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.source>17</maven.compiler.source>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-        <vaadin.version>17.0.9</vaadin.version>
+        <vaadin.version>23.0.6</vaadin.version>
+        <okta-spring-boot-starter.version>2.1.5</okta-spring-boot-starter.version>
+        <a-vaadin-helper.version>1.9.0</a-vaadin-helper.version>
     </properties>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.2.RELEASE</version>
+        <version>2.6.7</version>
     </parent>
 
     <repositories>
@@ -90,12 +91,12 @@
         <dependency>
             <groupId>org.vaadin.artur</groupId>
             <artifactId>a-vaadin-helper</artifactId>
-            <version>1.5.0</version>
+            <version>${a-vaadin-helper.version}</version>
         </dependency>
         <dependency>
             <groupId>com.okta.spring</groupId>
             <artifactId>okta-spring-boot-starter</artifactId>
-            <version>1.4.0</version>
+            <version>${okta-spring-boot-starter.version}</version>
         </dependency>
         <!-- Only for convenience, not required for using Vaadin or Okta -->
         <dependency>
@@ -109,14 +110,8 @@
         </dependency>
         <dependency>
             <groupId>com.vaadin</groupId>
-            <artifactId>vaadin-testbench</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
+            <artifactId>fusion-endpoint</artifactId>
+            <version>${vaadin.version}</version>
         </dependency>
     </dependencies>
 
