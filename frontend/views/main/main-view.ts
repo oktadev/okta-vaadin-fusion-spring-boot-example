@@ -1,4 +1,4 @@
-import { css, customElement, html, LitElement, property } from 'lit-element';
+import { css, html, LitElement } from 'lit';
 import '@vaadin/vaadin-app-layout/theme/lumo/vaadin-app-layout';
 // @ts-ignore
 import { AppLayoutElement } from '@vaadin/vaadin-app-layout/src/vaadin-app-layout';
@@ -7,6 +7,7 @@ import '@vaadin/vaadin-tabs/theme/lumo/vaadin-tab';
 import '@vaadin/vaadin-tabs/theme/lumo/vaadin-tabs';
 import { CSSModule } from '@vaadin/flow-frontend/css-utils';
 import { router } from '../../index';
+import {customElement, property} from "lit-element";
 
 // Rename to something more appropriate.
 interface MenuTab {

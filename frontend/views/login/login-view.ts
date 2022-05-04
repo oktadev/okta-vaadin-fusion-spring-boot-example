@@ -1,10 +1,9 @@
-import { customElement, html, internalProperty, LitElement } from 'lit-element';
+import { customElement, html, LitElement } from 'lit-element';
 import { signIn } from '../../auth';
 import '@vaadin/vaadin-login/vaadin-login-form';
 
 @customElement('login-view')
 export class LoginView extends LitElement {
-  @internalProperty()
   private error = !!new URLSearchParams().get('error');
 
   render() {

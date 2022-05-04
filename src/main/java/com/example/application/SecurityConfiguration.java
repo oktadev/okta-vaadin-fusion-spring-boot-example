@@ -25,8 +25,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         // @formatter:off
         // Vaadin handles CSRF for its endpoints
 
-        http.csrf().ignoringAntMatchers("/connect/**")
+        http
+            .csrf().ignoringAntMatchers("/connect/**")
             .and()
+            .cors().disable()
             .authorizeRequests()
             // allow access to everything, Vaadin will handle security
             .antMatchers("/**").permitAll()
